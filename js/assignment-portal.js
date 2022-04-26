@@ -1,8 +1,6 @@
 document.onload = lastUpdated()
 
 function lastUpdated() {
-    console.log("updated")
-    var lastUpdated = document.lastModified
-    var lastUpdatedMessage = document.getElementById("last-updated")
-    lastUpdatedMessage.textContent = "Last Updated: " + lastUpdated
+    document.getElementById("year").textContent = new Date().getFullYear()
+    document.getElementById("last-updated").textContent = "Last Updated: " + document.lastModified
 }

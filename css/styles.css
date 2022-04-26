@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Rubik&display=swap');
 
+/* ---------- General Formatting ---------- */
+
 :root {
     --heading-font: "Rubik", "Arial";
     --paragraph-font: "Quicksand", "Arial";
 }
-
 
 body {
     width: 800px;
@@ -12,86 +13,81 @@ body {
     margin-top: 10px;
 }
 
+/* ---------- Header ---------- */
+
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    background-color: #333;
+    font-family: var(--heading-font);
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 1px 3px 5px gray;
+    padding: 5px;
+}
+
+.photo {
+    width: 150px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 2px black;
+}
+
+.name {
+    color: white;
+    font-size: 50px;
+    justify-self: center;
+}
+
+/* ---------- Main ---------- */
+
 main {
     border-bottom: solid 2px #333;
 }
 
-#photo-name {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    background-color: #333;
-    border-radius: 25px;
-    font-family: var(--heading-font);
-    box-shadow: 1px 3px 5px gray;
-}
-
-#photo {
-    margin: 5px;
-    margin-bottom: 1px;
-}
-
-#photo img {
-    width: 150px;
-    border-radius: 22px;
-    box-shadow: 1px 2px 2px black;
-}
-
-#name {
-    color: white;
-    font-size: 40px;
-    grid-column: 3/5;
-    justify-self: center;
-}
-
-#title {
+.title {
     border-bottom: solid 2px #333;
     font-family: var(--heading-font);
 }
 
-#assignment-list {
+.assignment-list {
     font-family: var(--paragraph-font);
     font-size: 20px;
 }
 
-#footer-container {
+/* ---------- FOOTER ---------- */
+
+footer {
+    margin-top: 30px;
+    margin-bottom: 10px;
     background-color: #333;
     color: white;
     box-shadow: 1px 3px 5px gray;
     border-radius: 25px;
     height: 150px;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* display: flex;
     justify-content: space-between; */
     align-items: center;
 }
 
-#footer-container div {
-    margin: 10px;
-}
-
-#footer-text {
+.footer-text {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: var(--heading-font);
-    /* background-color: #333; */
-    /* color: white; */
+    font-size: 20px;
 }
     
-
-#footer-text h3 {
+.footer-text p {
     margin: 5px;
 }
 
-#last-updated-container {
+#last-updated {
     text-align: center;
     justify-content: center;
     font-family: var(--paragraph-font);
-}
-
-footer {
-    margin-top: 30px;
-    margin-bottom: 10px;
 }
