@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Rubik&display=swap');
+
+/* ---------- General Formatting ---------- */
+
+:root {
+    --heading-font: "Rubik", "Arial";
+    --paragraph-font: "Quicksand", "Arial";
+}
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+    /* text-align: center; */
+    padding: 10px;
+}
+
+h1 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--paragraph-font);
+}
+
+span {
+    font-family: var(--heading-font);
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 1px 3px 5px gray;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+}
+
+.principle-container {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    border: solid 1px #333;
+    border-radius: 20px;
+    box-shadow: 1px 3px 5px gray;
+}
+
+.principle-title {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    /* border-bottom: solid 1px gray; */
+}
+
+.company-name {
+    margin-left: 10px;
+}
+
+.page-link {
+    margin-left: 10px;
+}
+
+.screenshot {
+    width: 95%;
+    margin-top: 15px;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.description {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: white;
+    box-shadow: 1px 3px 5px gray;
+    border-radius: 25px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: center;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
+
+.footer-text p {
+    margin: 5px;
+}
+
+#last-updated {
+    text-align: center;
+    justify-content: center;
+    font-family: var(--paragraph-font);
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    body { 
+        width: 600px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body {
+        width: 95%;
+
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
