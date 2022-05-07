@@ -1,0 +1,133 @@
+:root {
+    --heading-font: 'Koulen', 'Arial';
+    --paragraph-font: 'Poppins', 'Arial';    
+
+    --color1: #cad2c5;
+    --color2: #84a98c;
+    --color3: #52796f;
+    --color4: #354f52;
+    --color5: #2f3e46;
+}
+
+/* ---------- General Formatting ---------- */
+
+body {
+    margin: 0 auto;
+    width: 1000px;
+    font-family: var(--paragraph-font);
+}
+
+h1 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    font-family: var(--heading-font);
+}
+
+header {
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+#nav-bar-logo {
+    width: 100px;
+}
+
+nav a {
+    margin: 5px;
+    text-decoration: none;
+    color: var(--color5);
+    border: solid 1px var(--color5);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: var(--color1);
+    color: black;
+    border: solid 1px black;
+}
+
+main {
+    margin: 20px;
+}
+
+#logo {
+    width: 200px;
+}
+
+footer {
+    background-color: var(--color4);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.target-audience-container {
+    background-color: var(--color1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--color5);
+    margin-bottom: 20px;
+}
+
+.target-audience-container-title {
+    font-family: var(--heading-font);
+    font-size: 25px;
+    background-color: #354f52;
+    color: white;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding-left: 10px;
+}
+
+.container-element-title {
+    font-family: var(--heading-font);
+    font-size: 20px;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+.container-element {
+    padding-left: 10px;
+    margin: 5px
+}
+
+#color-palette {
+    display: flex;
+}
+
+#color-palette p {
+    padding: 10px;
+}
+
+.color1 {
+    background-color: var(--color1);
+}
+
+.color2 {
+    background-color: var(--color2);
+}
+
+.color3 {
+    background-color: var(--color3);
+}
+
+.color4 {
+    background-color: var(--color4);
+}
+
+.color5 {
+    background-color: var(--color5);
+}
+
+#typography-heading-font {
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
