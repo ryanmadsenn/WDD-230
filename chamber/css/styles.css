@@ -18,6 +18,10 @@ body {
     font-family: var(--paragraph-font);
 }
 
+section h2 {
+    text-align: center;
+}
+
 h1 {
     font-family: var(--heading-font);
 }
@@ -78,12 +82,21 @@ nav a {
     margin-right: -20px;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+}
+
 #main-title {
     text-align: center;
 }
 
 #hero {
     text-align: center;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    border: solid 1px #333;
 }
 
 #vineyard-img {
@@ -94,14 +107,21 @@ nav a {
 
 #news {
     margin: 20px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border: solid 1px #333;
 }
 
 #events {
     margin: 20px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: solid 1px #333;
 }
 
 #events-container {
     display: flex;
+    flex-direction: column;
 }
 
 .event {
@@ -125,12 +145,15 @@ nav a {
 }
 
 #weather {
-    margin: 20px
+    margin: 20px;
+    border: solid 1px #333;
 }
 
 #weather-box-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .weather-box {
@@ -153,14 +176,19 @@ nav a {
 
 #join {
     margin: 20px;
+    border: solid 1px #333;
 }
 
 #company-spotlights {
     margin: 20px;
+    grid-column: 3/4;
+    grid-row: 1/4;
+    border: solid 1px #333;
 }
 
 #spotlight-container {
     display: flex;
+    flex-direction: column;
 }
 
 .spotlight {
@@ -182,7 +210,7 @@ nav a {
 .spotlight img {
     padding: 10px;
     border-radius: 25px;
-    
+    height: 200px;
 }
 
 .spotlight p {
