@@ -5,6 +5,7 @@ const list = document.querySelector('.list')
 button.addEventListener('click', appendItem)
 
 function appendItem() {
+    if (input.value != "") {
     let newItem = document.createElement('li')
     newItem.textContent = input.value
 
@@ -17,6 +18,10 @@ function appendItem() {
     list.appendChild(newItem)
     input.value = ""
     input.focus()
+    } else {
+        alert("You must enter a chapter.")
+        return
+    }
 }
 
 function deleteListItem() {
