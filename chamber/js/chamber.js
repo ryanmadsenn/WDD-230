@@ -3,10 +3,6 @@ document.onload = checkWidth();
 window.onresize = checkWidth;
 document.getElementById('hamburger').addEventListener('click', dipslayMenu)
 
-
-
-
-
 // Insert date into header.
 const now = new Date();
 const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(now);
@@ -41,8 +37,23 @@ function dipslayMenu() {
     }    
 }
 
+function displayInviation() {
+    invitation = document.getElementById('invitation')
+    
+    date = new Date()
+    dow = date.getDay()
+
+    if (dow == 1 || dow == 2) {
+        invitation.style.display = 'block'
+    } else {
+        invitation.style.display = 'none'
+    }
+
+    console.log(dow)
+}
+
 // Insert copyright year into footer and last modified date into footer.
 document.getElementById("year").textContent = new Date().getFullYear()
 document.getElementById("last-updated").textContent = "Last Updated: " + document.lastModified
-
+displayInviation()
 

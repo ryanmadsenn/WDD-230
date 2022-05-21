@@ -16,6 +16,7 @@
 body {
     margin: 0 auto;
     font-family: var(--paragraph-font);
+    background-color: whitesmoke;
 }
 
 section h2 {
@@ -32,6 +33,13 @@ h2 {
 
 header {
     background-color: var(--color2);
+}
+
+#invitation {
+    text-align: center;
+    background-color: var(--color4);
+    color: white;
+    padding: 10px;
 }
 
 nav {
@@ -90,43 +98,91 @@ main {
 
 #main-title {
     text-align: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 10;
+    font-size: 35px;
+    margin-top: -1px;
 }
 
 #hero {
+    margin: 10px;
     text-align: center;
     grid-column: 2/3;
     grid-row: 1/3;
-    border: solid 1px #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2.5px;
 }
 
 #vineyard-img {
-    width: 80%;
-    border-radius: 25px;
-    box-shadow: 0px 3px 4px gray;
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-radius: 8.5px;
+    /* box-shadow: 0px 1px 2px gray; */
+}
+
+#call-to-action {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: white;
+    text-decoration: none;
+    /* margin-top: 10px; */
+}
+
+#call-to-action a {
+    color: black;
+    text-decoration: none;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 2px gray;
+    padding: 15px;
+    border-radius: 10px;
+    transition: font-size .5s;
+}
+
+#call-to-action a:hover {
+    font-size: 17px;
+}
+
+#arrow {
+    font-size: 20px;
 }
 
 #news {
-    margin: 20px;
+    margin: 10px;
+    padding: 20px;
     grid-column: 2/3;
     grid-row: 3/4;
-    border: solid 1px #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    background-color: white;
+}
+
+#news h2 {
+    margin: 0;
 }
 
 #events {
-    margin: 20px;
+    margin: 10px;
     grid-column: 1/2;
     grid-row: 1/2;
-    border: solid 1px #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    background-color: white;
 }
 
-#events-container {
-    display: flex;
-    flex-direction: column;
+#events h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .event {
     border: solid 1px var(--color5);
-    border-radius: 20px;
+    border-radius: 6.5px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -134,39 +190,42 @@ main {
 
 .event span {
     background-color: var(--color2);
-    color: white;
+    color: black;
     padding: 10px;
-    border-top-left-radius: 18.5px;
-    border-top-right-radius: 18.5px;
+    border-top-left-radius: 5.5px;
+    border-top-right-radius: 5.5px;
 }
 
 .event p {
-    padding: 10px;
+    padding-left: 10px;
 }
 
 #weather {
-    margin: 20px;
-    border: solid 1px #333;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    background-color: white;
 }
 
-#weather-box-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#weather h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .weather-box {
     border: solid 1px black;
+    border-radius: 6.5px;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    margin: 10px;
 }
 
 .weather-box span {
     background-color: var(--color3);
     color: white;
     padding: 10px;
+    border-top-left-radius: 5.5px;
+    border-top-right-radius: 5.5px;
 }
 
 .weather-box p {
@@ -175,15 +234,30 @@ main {
 }
 
 #join {
-    margin: 20px;
-    border: solid 1px #333;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    background-color: white;
+}
+
+#join h2 {
+    margin: 0;
 }
 
 #company-spotlights {
-    margin: 20px;
+    margin: 10px;
+    /* padding: 20px; */
     grid-column: 3/4;
     grid-row: 1/4;
-    border: solid 1px #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+    background-color: white;
+}
+
+#company-spotlights h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 #spotlight-container {
@@ -196,21 +270,21 @@ main {
     flex-direction: column;
     margin: 10px;
     border: solid 1px black;
-    border-radius: 20px;
+    border-radius: 6.5px;
 }
 
 .spotlight span {
     padding: 10px;
     background-color: var(--color4);
     color: white;
-    border-top-left-radius: 18.5px;
-    border-top-right-radius: 18.5px;
+    border-top-left-radius: 5.5px;
+    border-top-right-radius: 5.5px;
 }
 
 .spotlight img {
     padding: 10px;
     border-radius: 25px;
-    height: 200px;
+    height: 150px;
 }
 
 .spotlight p {
