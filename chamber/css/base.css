@@ -285,6 +285,10 @@ nav a {
     align-items: center;
 }
 
+#icon-and-temp p {
+    font-size: 40px;
+}
+
 #icon-and-temp img {
     height: 75px;
 }
