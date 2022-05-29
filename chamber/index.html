@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home page for the Tri-Cites Chamber of Commerce">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/large.css">
     <link rel="stylesheet" href="css/medium.css">
-    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/base.css">
     <script defer src="js/chamber.js"></script>
+    <script defer src="js/wind-chill.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
             <a id="hamburger" href="javascript:void(0);" class="icon">
                 <i class="fa fa-bars"></i>
             </a>
-            <img id="nav-bar-logo" src="images/Tri-Cities Chamber of Commerce-logos_black.png" alt="TCOC logo black">
+            <img id="nav-bar-logo" src="images/tcoc-logo-black.webp" alt="TCOC logo black">
             <div id="nav-buttons">
                 <a href="index.html">Home</a>
                 <a href="#">Discover</a>
@@ -47,7 +48,12 @@
         <!-- <img id="cable-bridge-img" src="images/cable-bridge.jpeg" alt="Cable Bridge"> -->
         <section id="hero">
             <h1 id="main-title">Tri-Cities Chamber of Commerce</h1>
-            <img id="vineyard-img" src="images/vineyard.jpeg" alt="Vineyard">
+            <picture id="vineyard-img">
+                <source media="(min-width: 1000px)" srcset="images/temp-image-large.jpg" class="responsive-img">
+                <source media="(min-width: 600px)" srcset="images/temp-image-medium.jpeg" class="responsive-img"> 
+                <img src="images/temp-image-small.jpeg" class="responsive-img">
+            </picture>
+            <p id="image-label">Size: </p>
             <div id="call-to-action">
                 <a href="#">Join the chamber <span id="arrow">&#8594;</span></a>
             </div>
@@ -65,11 +71,18 @@
         </section>
         <section id="weather">
             <h2>Weather</h2>
-            <div class="weather-box"><span>Today</span>
+            <!-- <div class="weather-box"><span>Today</span>
                 <p>Conditions:</p>
                 <p>High:</p>
-                <p>Low:</p>
-            </div>         
+                <p>Low:</p> -->
+                <div id="icon-and-temp">
+                    <img src="images/weather_optimized.png" alt="weather icon">
+                    <h4><span id="temp">33</span>° F</h4>     
+                </div>
+                <div id="conditions"><span id="conditions-title">Partly Cloudy</span>
+                    <p>Wind Speed: <span id="mph">5</span> mph</p> 
+                    <p>Wind Chill: <span id="wind-chill"></span></p>
+                </div>
         </section>
         <section id="join">
             <h2>Join</h2>

@@ -48,8 +48,6 @@ function displayInviation() {
     } else {
         invitation.style.display = 'none'
     }
-
-    console.log(dow)
 }
 
 // Insert copyright year into footer and last modified date into footer.
