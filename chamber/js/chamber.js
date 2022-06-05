@@ -37,6 +37,8 @@ function dipslayMenu() {
     }    
 }
 
+
+// Conditionally display invitation if it is Monday or Tuesday.
 function displayInviation() {
     invitation = document.getElementById('invitation')
     
@@ -50,8 +52,101 @@ function displayInviation() {
     }
 }
 
+// Functions to change border radius on discover boxes on discover page.
+function decreaseDisoverBoxBorderRadius(event){
+    let num;
+
+    if (event.target.id == "columbia-river-image"){
+        num = 0
+    } else if (event.target.id == "vineyard-image"){
+        num = 1
+    } else if (event.target.id == "badger-mountain-image") {
+        num = 2
+    } else if (event.target.id == "hanford-nuclear-site-image") {
+        num = 3
+    } else if (event.target.id == "toyota-center-image") {
+        num = 4
+    }
+
+    if (num % 2 == 0) {
+        box = document.getElementsByClassName('discover-box')
+        box[num].style.borderBottomLeftRadius = "15px"
+    } else {
+        box = document.getElementsByClassName('discover-box')
+        box[num].style.borderTopRightRadius = "15px"
+    }
+}
+
+function increaseDiscoverBoxBorderRadius(){
+    let num;
+
+    if (event.target.id == "columbia-river-image"){
+        num = 0
+    } else if (event.target.id == "vineyard-image"){
+        num = 1
+    } else if (event.target.id == "badger-mountain-image") {
+        num = 2
+    } else if (event.target.id == "hanford-nuclear-site-image") {
+        num = 3
+    } else if (event.target.id == "toyota-center-image") {
+        num = 4
+    }
+
+    if (num % 2 == 0) {
+        box = document.getElementsByClassName('discover-box')
+        box[num].style.borderBottomLeftRadius = "100px"
+    } else {
+        box = document.getElementsByClassName('discover-box')
+        box[num].style.borderTopRightRadius = "100px"
+    }
+}
+
+
+// Discover box event listeners.
+let discoverImages = document.getElementsByClassName('discover-image')
+for (let i = 0; i < discoverImages.length; i++) {
+    discoverImages[i].addEventListener('mouseenter', decreaseDisoverBoxBorderRadius)
+    discoverImages[i].addEventListener('mouseleave', increaseDiscoverBoxBorderRadius)
+}
+
 // Insert copyright year into footer and last modified date into footer.
 document.getElementById("year").textContent = new Date().getFullYear()
 document.getElementById("last-updated").textContent = "Last Updated: " + document.lastModified
 displayInviation()
 
+let imagesToLoad = document.querySelectorAll('img[data-src]');
+
+
+const imgOptions = {
+    threshold: 1,
+    rootMargin: "0px 0px 50px 0px"
+}
+
+
+const loadImages = (image) => {
+  image.setAttribute('src', image.getAttribute('data-src'));
+  image.onload = () => {
+    image.removeAttribute('data-src');
+  };
+};
+
+
+if('IntersectionObserver' in window) {
+const observer = new IntersectionObserver((items, observer) => {
+    items.forEach((item) => {
+    if(item.isIntersecting) {
+        loadImages(item.target);
+        observer.unobserve(item.target);
+    }
+    });
+}, imgOptions);
+
+imagesToLoad.forEach((img) => {
+    observer.observe(img);
+});
+
+} else {
+imagesToLoad.forEach((img) => {
+    loadImages(img);
+});
+}

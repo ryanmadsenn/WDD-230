@@ -48,7 +48,7 @@ nav a {
     margin-right: -20px;
 }
 
-main {
+#home-page-main {
     margin: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -123,4 +123,15 @@ main {
 .divider {
     display: none;
 }
+
+.discover-image {
+    width: 97.5%;
+    border-radius: 15px;
+}
+
+.discover-box {
+    flex-direction: column;
+    border-radius: 20px;
+}
+
 }
