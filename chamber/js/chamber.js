@@ -1,5 +1,6 @@
 // Add event listeners.
 document.onload = checkWidth();
+window.onload = updateLastVisit;
 window.onresize = checkWidth;
 document.getElementById('hamburger').addEventListener('click', dipslayMenu)
 
@@ -114,6 +115,24 @@ document.getElementById("year").textContent = new Date().getFullYear()
 document.getElementById("last-updated").textContent = "Last Updated: " + document.lastModified
 displayInviation()
 
+
+function updateLastVisit() {
+    let date = new Date()
+    let lastDate = new Date(window.localStorage.getItem('lastVisit'))
+    
+    let diff = date.getTime() - lastDate.getTime()
+    console.log(diff)
+
+    let dayDiff = Math.round(diff / (1000 * 3600 * 24))
+
+    document.getElementById('last-visit').textContent = "Last visit: " + dayDiff + " days ago"
+
+    window.localStorage.setItem("lastVisit", date)
+
+
+}
+
+
 let imagesToLoad = document.querySelectorAll('img[data-src]');
 
 
@@ -150,3 +169,5 @@ imagesToLoad.forEach((img) => {
     loadImages(img);
 });
 }
+
+
