@@ -32,7 +32,7 @@ nav {
     margin-right: -20px;
 }
 
-main {
+#home-page-main {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     
@@ -230,4 +230,17 @@ main {
     justify-content: center;
     text-align: center;
 }
+
+.discover-image {
+    width: 700px;
+    border-radius: 15px;
 }
+
+.discover-box {
+    border-radius: 15px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+}
+
