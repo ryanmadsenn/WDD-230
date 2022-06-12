@@ -58,11 +58,27 @@
             <fieldset>
                 <legend>Business Info</legend>
                 <label class="top">*Business Name/Title: <input type="text" required></label>
-                <div>Membership Type:</div>
-                <label class="sbs"><input type="radio" name="membership" value="non-profit">Non-profit Membership</label>
-                <label class="sbs"><input type="radio" name="membership" value="bronze">Bronze Membership</label>
-                <label class="sbs"><input type="radio" name="membership" value="silver">Silver Membership</label>
-                <label class="sbs"><input type="radio" name="membership" value="gold">Gold Membership</label>
+                <div id="membership-container">
+                    <div id="membership-type-container">
+                        <div>Membership Type:</div>
+                        <label class="sbs"><input type="radio" name="membership" value="non-profit">Non-profit Membership</label>
+                        <label class="sbs"><input type="radio" name="membership" value="bronze">Bronze Membership</label>
+                        <label class="sbs"><input type="radio" name="membership" value="silver">Silver Membership</label>
+                        <label class="sbs"><input type="radio" name="membership" value="gold">Gold Membership</label>
+                    </div>
+                    <div id="membership-info">
+                        <span>Membership Info</span>
+                        <p class="membership-title">Non-Profit — Free</p>
+                        <p>If you're a soloprenuer or a non-profit business, enjoy all the benefits that the Chamber offers completely free!</p>
+                        <p class="membership-title">Bronze Membership — $500/year</p>
+                        <p>Get access to the chamber directory, forum speaker events, and community updates</p>
+                        <p class="membership-title">Silver Membership — $1000/year</p>
+                        <p>Above benefits and access to monthly business development meetings. These meetings are a great place to network and provide opportunites to work with other businesses.</p>
+                        <p class="membership-title">Gold Membership — $1500/year</p>
+                        <p>Above benefits, get featured as a company spotlight, and get exclusive advertising opportunites at community events!</p>
+                    </div>
+                </div>
+
                 <label class="top">Business Description:<textarea name="business-description" rows="20"></textarea></label>
                 <input type="hidden" name="datetime" id="form-datetime">
             </fieldset>
