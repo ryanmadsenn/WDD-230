@@ -134,4 +134,9 @@ nav a {
     border-radius: 20px;
 }
 
+#membership-container {
+    display: flex;
+    flex-direction: column;
+}
+
 }

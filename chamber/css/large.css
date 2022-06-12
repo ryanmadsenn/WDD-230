@@ -242,5 +242,10 @@ nav {
     border-top-right-radius: 100px;
 }
 
+#membership-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 }
 
