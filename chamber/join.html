@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Tri-Cities Chamber of Commerce">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script defer src="js/chamber.js"></script>
+    <script defer src="js/wind-chill.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Join</title>
+</head>
+<body id="join-body">
+    <header>
+        <div id="invitation">🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</div>
+        <nav>
+            <a id="hamburger" href="javascript:void(0);" class="icon">
+                <i class="fa fa-bars"></i>
+            </a>
+            <img id="nav-bar-logo" src="images/tcoc-logo-black.webp" alt="TCOC logo black">
+            <div id="nav-buttons">
+                <a href="index.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="#">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="#">Contact</a>
+            </div>
+            <div id="social-date">
+                <div class="date"></div>
+                <div id="nav-social">
+                    <a href="#">
+                        <img class="social-icon" id="nav-facebook-logo" src="images/facebook-logo-black.png" alt="Facebook Icon">
+                    </a>
+                    <a href="#">
+                        <img class="social-icon"  id="nav-instagram-logo" src="images/glyph-logo_May2016.png" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="join-main">
+        <h1>Join the Chamber</h1>
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Applicant Info</legend>
+                <label class="top">*First Name: <input type="text" name="fname" required></label>
+                <label class="top">*Last Name: <input type="text" name="lname" required></label>
+                <label class="top">Business Position: <input type="text" name="fname"></label>
+                <label class="top">Phone Number: <input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label class="top">*Email: <input type="email" name="email" placeholder="john.smith@email.com" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Business Info</legend>
+                <label class="top">*Business Name/Title: <input type="text" required></label>
+                <div>Membership Type:</div>
+                <label class="sbs"><input type="radio" name="membership" value="non-profit">Non-profit Membership</label>
+                <label class="sbs"><input type="radio" name="membership" value="bronze">Bronze Membership</label>
+                <label class="sbs"><input type="radio" name="membership" value="silver">Silver Membership</label>
+                <label class="sbs"><input type="radio" name="membership" value="gold">Gold Membership</label>
+                <label class="top">Business Description:<textarea name="business-description" rows="20"></textarea></label>
+                <input type="hidden" name="datetime" id="form-datetime">
+            </fieldset>
+            <input class="submitBtn" type="submit" value="Join">
+        </form>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <p>&copy; <span id="year"></span> Tri-Cities Chamber of Commerce</p>
+            <p class="divider">|</p>
+            <p>Ryan Madsen</p>
+            <p class="divider">|</p>
+            <p>WDD230 Project</p>
+            <p class="divider">|</p>
+            <p id="last-updated"></p>
+            <p class="divider">|</p>
+            <p id="last-visit"></p>
+        </div>
+    </footer>
+</body>
+</html>

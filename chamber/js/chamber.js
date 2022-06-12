@@ -121,15 +121,12 @@ function updateLastVisit() {
     let lastDate = new Date(window.localStorage.getItem('lastVisit'))
     
     let diff = date.getTime() - lastDate.getTime()
-    console.log(diff)
 
     let dayDiff = Math.round(diff / (1000 * 3600 * 24))
 
     document.getElementById('last-visit').textContent = "Last visit: " + dayDiff + " days ago"
 
     window.localStorage.setItem("lastVisit", date)
-
-
 }
 
 
@@ -137,7 +134,7 @@ let imagesToLoad = document.querySelectorAll('img[data-src]');
 
 
 const imgOptions = {
-    threshold: 1,
+    threshold: 0,
     rootMargin: "0px 0px 50px 0px"
 }
 
@@ -171,3 +168,6 @@ imagesToLoad.forEach((img) => {
 }
 
 
+// Put timestamp in form hidden field.
+let dateTimeField = document.getElementById("form-datetime")
+dateTimeField.value = new Date();
