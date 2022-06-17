@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: "Merriweather", serif;
+    color: darkslateblue;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    box-shadow: 0px 0px 5px #333;
+    border-radius: 15px;
+    width: 100%;
+}
+
+div {
+    box-shadow: 0px 0px 3px #555;
+    border-radius: 17.5px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightsteelblue;
+    border: solid 1px darkblue;
+    border-radius: 15px;
+}
+
+footer {
+    margin: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards { 
+        grid-template-columns: 1fr;
+    }
+}
