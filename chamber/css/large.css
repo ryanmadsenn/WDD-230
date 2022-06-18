@@ -247,5 +247,9 @@ nav {
     grid-template-columns: 1fr 1fr;
 }
 
+#directory {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 }
 

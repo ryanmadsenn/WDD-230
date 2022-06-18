@@ -1,5 +1,5 @@
 // Add event listeners.
-document.onload = checkWidth();
+document.onload = checkWidth(), printJSON();
 window.onload = updateLastVisit;
 window.onresize = checkWidth;
 document.getElementById('hamburger').addEventListener('click', dipslayMenu)
@@ -171,3 +171,54 @@ imagesToLoad.forEach((img) => {
 // Put timestamp in form hidden field.
 let dateTimeField = document.getElementById("form-datetime")
 dateTimeField.value = new Date();
+
+
+async function printJSON() {
+    fetch("./js/data.json")
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(data) {
+            console.log(data['businesses'])
+            let businesses = data['businesses']
+
+            businesses.forEach( business => {
+                
+                // Define new html elements
+                let container = document.getElementById('directory')
+                let sect = document.createElement('section')
+                sect.classList.add('business')
+    
+    
+                let businessName = document.createElement('span')
+                businessName.classList.add('business-name')
+                let address = document.createElement('p')
+                let phone = document.createElement('p')
+                let website = document.createElement('a')
+                let membership = document.createElement('p')
+                let image = document.createElement('img')
+    
+                // Assign text content.
+                businessName.textContent = business.name;
+                address.textContent = business.address;
+                phone.textContent = business.phone;
+                website.textContent = "Visit site"
+                website.setAttribute('href', business.website)
+                membership.textContent = business.membershipStatus
+                image.setAttribute('src', business.imageLink)
+    
+                // Append elements.
+                // sect.appendChild(businessName);
+                sect.appendChild(image);
+                sect.appendChild(address);
+                sect.appendChild(phone);
+                sect.appendChild(website);
+                sect.appendChild(membership);
+                
+                container.appendChild(sect)
+            });
+        });
+
+        
+    
+}
