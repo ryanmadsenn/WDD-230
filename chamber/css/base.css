@@ -229,11 +229,15 @@ nav a {
 #hero {
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 3px gray;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr;
     padding: 2.5px;
+}
+
+#call-to-action a:hover {
+    font-size: 17px;
 }
 
 .responsive-img{
@@ -259,7 +263,7 @@ nav a {
 #events {
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 3px gray;
     background-color: white;
 }
 
@@ -285,7 +289,7 @@ nav a {
 
 #weather {
     border-radius: 10px;
-    box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 3px gray;
     background-color: white;
     padding: 10px;
 }
@@ -330,7 +334,7 @@ nav a {
 
 #news {
     border-radius: 10px;
-    box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 3px gray;
     background-color: white;
     padding: 10px;
 }
@@ -341,7 +345,7 @@ nav a {
 
 #company-spotlights {
     border-radius: 10px;
-    box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 3px gray;
     background-color: white;
     padding: 10px;
 }
@@ -385,7 +389,7 @@ nav a {
 #join {
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px gray;
+    box-shadow: 0px 0px 3px gray;
     background-color: white;
 }
 

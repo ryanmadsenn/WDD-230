@@ -1,5 +1,5 @@
 // Add event listeners.
-document.onload = checkWidth(), printJSON();
+document.onload = checkWidth(), printJSON(), apiFetch();
 window.onload = updateLastVisit;
 window.onresize = checkWidth;
 document.getElementById('hamburger').addEventListener('click', dipslayMenu)
@@ -170,7 +170,10 @@ imagesToLoad.forEach((img) => {
 
 // Put timestamp in form hidden field.
 let dateTimeField = document.getElementById("form-datetime")
-dateTimeField.value = new Date();
+try {
+    dateTimeField.value = new Date();
+} catch (error) {}
+
 
 
 async function printJSON() {
@@ -179,7 +182,7 @@ async function printJSON() {
             return response.json()
         })
         .then(function(data) {
-            console.log(data['businesses'])
+            // console.log(data['businesses'])
             let businesses = data['businesses']
 
             businesses.forEach( business => {
@@ -215,10 +218,44 @@ async function printJSON() {
                 sect.appendChild(website);
                 sect.appendChild(membership);
                 
-                container.appendChild(sect)
+                try {
+                    container.appendChild(sect)
+                } catch (error) {
+                }
             });
         });
 
         
     
+}
+
+
+async function apiFetch() {
+
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=Kennewick&appid=f704b08b378b46faee3fbfd691fe3776&units=imperial"
+
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        displayResults(data);
+      } else {
+          throw Error(await response.text());
+      }
+    } catch (error) {
+        console.log(error);
+    }
+  }
+  
+
+function displayResults(data) {
+    const currentTemp = document.querySelector('#current-temp');
+    const weatherIcon = document.querySelector('#weather-icon');
+    const captionDesc = document.querySelector('#conditions-title');
+    const windSpeed = document.querySelector('#mph')
+
+    currentTemp.textContent = data.main.temp.toFixed(0)
+    weatherIcon.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
+    captionDesc.textContent = data.weather[0].description.toUpperCase()
+    windSpeed.textContent = data.wind.speed
 }
