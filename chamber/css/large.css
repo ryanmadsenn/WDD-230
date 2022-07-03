@@ -2,8 +2,12 @@
 
 nav {
     display: grid;
-    grid-template-columns: 100px 2fr 1fr;
+    grid-template-columns: 70px 2fr 1fr;
     align-items: center;
+}
+
+#nav-bar-logo {
+    width: 70px;
 }
 
 #nav-buttons {
