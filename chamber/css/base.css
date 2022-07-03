@@ -67,6 +67,7 @@
     #home-page-main {
         margin: 10px;
         display: grid;
+        grid-template-columns: 1fr;
     }
 
     #main-title {
@@ -78,6 +79,7 @@
     }
     
     #vineyard-img {
+        border-radius: 8.5px;
         grid-column: 1/2;
         grid-row: 1/2;
     }
@@ -166,7 +168,22 @@
     #directory {
         grid-template-columns: 1fr;
     }
+
+    #contact-main {
+        width: 100%;
+    }
+
+    #contact-main textarea {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #contact-main input {
+        width: 100%;
+        max-width: 300px;
+    }
 }
+
 
 /* ---------- General Formatting ---------- */
 
@@ -182,6 +199,10 @@ h1 {
 
 h2 {
     font-family: var(--heading-font);
+}
+
+picture {
+    line-height: 0%;
 }
 
 header {
@@ -219,6 +240,7 @@ nav a {
 }
 
 #main-title {
+    color: black;
     text-align: center;
     grid-column: 1/2;
     grid-row: 1/2;
@@ -236,8 +258,36 @@ nav a {
     padding: 2.5px;
 }
 
+#vineyard-img {
+    width: 100%;
+}
+
+#call-to-action a {
+    transition: font-size .3s, background-color .3s, color .3s, border .3s;
+}
+
 #call-to-action a:hover {
-    font-size: 17px;
+    font-size: 20.5px;
+    background-color: var(--color3);
+    color: white;
+    border: solid 1px white;
+}
+
+#join-button {
+    color: white;
+    text-decoration: none;
+    background-color: var(--color3);
+    box-shadow: 0px 0px 2px gray;
+    padding: 15px;
+    border-radius: 10px;
+    transition: font-size .5s, background-color .5s;
+    margin: 0;
+    margin-top: 20px;
+}
+
+#join-button:hover {
+    background-color: var(--color4);
+    font-size: 19px;
 }
 
 .responsive-img{
@@ -260,31 +310,46 @@ nav a {
     margin: 0;
 }
 
+#events img {
+    margin: 0 auto;
+    width: 150px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px #555;
+    margin-top: 10px;
+}
+
 #events {
+    display: flex;
+    flex-direction:  column;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 3px gray;
     background-color: white;
 }
 
+#speaker-name {
+    font-size: 25px;
+}
+
 .event {
+    text-align: center;
     border: solid 1px var(--color5);
-    border-radius: 6.5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     margin: 0;
 }
 
 .event span {
-    background-color: var(--color2);
+    background-color: var(--color3);
     color: white;
     padding: 10px;
-    border-top-left-radius: 5.5px;
-    border-top-right-radius: 5.5px;
+    border-top-left-radius: 8.5px;
+    border-top-right-radius: 8.5px;
 }
 
 .event p {
-    padding: 10px;
+    margin: 5px;
 }
 
 #weather {
@@ -339,6 +404,16 @@ nav a {
     padding: 10px;
 }
 
+#news a {
+    padding: 10px;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #777;
+
+}
+
 #news h2 {
     margin: 0;
 }
@@ -391,14 +466,19 @@ nav a {
     border-radius: 10px;
     box-shadow: 0px 0px 3px gray;
     background-color: white;
+    flex-direction: column;
 }
 
 #join h2 {
     margin: 0;
+    /* padding-left: 10px;
+    padding-right: 10px; */
 }
 
 #join p {
     margin: 0;
+    /* padding-left: 10px;
+    padding-right: 10px; */
 }
 
 footer {
@@ -487,7 +567,7 @@ transition: filter .5s;
 /* ---------- Join Page ---------- */
 
 #join-main {
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -614,8 +694,9 @@ form input.submitBtn:hover {
     flex-direction: column;
     box-shadow: 0px 0px 4px gray;
     border: solid 1px var(--color4);
-    margin-bottom: 50px;
     justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .business-name {
@@ -628,11 +709,21 @@ form input.submitBtn:hover {
     padding-left: 15px;
 }
 
-.business p, a {
+.business p, .business a {
     margin: 10px;
     padding-left: 15px;
     padding-right: 15px;
     font-size: 18px;
+}
+
+.business a {
+    /* color: white;
+    background-color: var(--color4); */
+    border-radius: 8px;
+}
+
+.business a:hover {
+    background-color: whitesmoke;
 }
 
 .business img {
@@ -643,4 +734,83 @@ form input.submitBtn:hover {
     margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.gold-member {
+    background-color: goldenrod;
+    border-radius: 8px;
+    /* box-shadow: 0px 1px 2px #555; */
+}
+
+.silver-member {
+    background-color: silver;
+    border-radius: 8px;
+}
+
+.bronze-member {
+    background-color: burlywood;
+    border-radius: 8px;
+}
+
+
+/* ---------- Contact Page ---------- */
+
+#contact-main {
+    margin: 0 auto;
+    /* width: 500px; */
+}
+
+#contact-main h2,p {
+    margin-left: 20px;
+}
+
+#contact-title {
+    margin-left: 20px;
+}
+
+#contact-form {
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+#contact-form label {
+    display: block;
+}
+
+#contact-form input {
+    border: solid 1px #333;
+    padding: 7.5px;
+    border-radius: 7.5px;
+    /* width: 200px; */
+}
+
+#contact-form textarea {
+    border: solid 1px #333;
+    padding: 7.5px;
+    border-radius: 7.5px;
+    /* width: 350px; */
+}
+
+#contact-form li {
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 35px;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+#contact-button {
+    background-color: var(--color5);
+    color: white;
+}
+
+#contact-button:hover {
+    background-color: var(--color4);
+    color: white;
+    cursor: pointer;
 }

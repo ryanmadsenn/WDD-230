@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/base.css">
     <script defer src="js/chamber.js"></script>
     <script defer src="js/wind-chill.js"></script>
+    <script defer src="js/companySpotlights.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
                 <a href="discover.html">Discover</a>
                 <a href="directory.html">Directory</a>
                 <a href="join.html">Join</a>
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div id="social-date">
                 <div class="date"></div>
@@ -48,13 +49,11 @@
         <!-- <img id="cable-bridge-img" src="images/cable-bridge.jpeg" alt="Cable Bridge"> -->
         <section id="hero">
             <h1 id="main-title">Tri-Cities Chamber of Commerce</h1>
-            <img id="vineyard-img" src="images/vineyard.jpeg" alt="Cable Bridge">
-            <!-- <picture id="vineyard-img">
-                
-                <source media="(min-width: 1000px)" srcset="images/temp-image-large.jpg" class="responsive-img">
-                <source media="(min-width: 600px)" srcset="images/temp-image-medium.jpeg" class="responsive-img"> 
-                <img src="images/temp-image-small.jpeg" class="responsive-img" alt="Chamber members talking.">
-            </picture> -->
+            <!-- <img id="vineyard-img" src="images/vineyard-cropped.jpeg" alt="Cable Bridge"> -->
+            <picture id="vineyard-img">
+                <source media="(min-width: 1000px)" srcset="images/vineyard-cropped.jpeg" class="responsive-img">
+                <img src="images/vineyard.webp" class="responsive-img" alt="Chamber members talking.">
+            </picture>
             <!-- <p id="image-label">Size: </p> -->
             <div id="call-to-action">
                 <a href="#">Join the chamber <span id="arrow">&#8594;</span></a>
@@ -62,13 +61,17 @@
         </section>
         <section id="news">
             <h2>News</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor iure iste exercitationem id quasi, sit ut voluptatem quae similique architecto velit quo veniam fugit ipsum ab nisi accusamus a sequi aut. Nisi architecto officiis recusandae quae in eum voluptatibus animi, optio assumenda, rem cum quod consequuntur numquam eaque, harum sequi.</p>
+            <h3>‘Flying saucers’ and ‘men in black.’ Why WA is your best bet for a UFO sighting</h3>
+            <br>
+            <a href="https://www.tri-cityherald.com/news/state/washington/article263115023.html#storylink=cpy">Read more at the Tri-City Herald</a>
         </section>
         <section id="events">
             <h2>Events</h2>
-            <div class="event"><span>Chamber Meeting</span>
-                <p>Date: </p>
-                <p>Location: </p>
+            <div class="event"><span>Forum Speaker</span>
+                <img src="images/elon_musk (1).jpeg" alt="Elon Musk">
+                <p id="speaker-name">Elon Musk</p>
+                <p>Date: August 1st, 2022 </p>
+                <p>Location: Toyota Center </p>
             </div>
         </section>
         <section id="weather">
@@ -88,11 +91,12 @@
         </section>
         <section id="join">
             <h2>Join</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repellendus natus ad incidunt sequi cum suscipit a quod aspernatur consequuntur.</p>
+            <p>Learn about the benefits of joining the chamber!</p>
+            <a id="join-button" href="#">Join the chamber <span id="arrow">&#8594;</span></a>
         </section>
         <section id="company-spotlights">
             <h2>Company Spotlights</h2>
-            <div id="spotlight-container">
+            <!-- <div id="spotlight-container">
                 <div class="spotlight"><span>Name</span>
                     <img src="images/placeholder.png" alt="placeholder">
                 </div>
@@ -101,7 +105,7 @@
                 </div>
                 <div class="spotlight"><span>Name</span>
                     <img src="images/placeholder.png" alt="placeholder">
-                </div>
+                </div> -->
             </div>
         </section>
     </main>

@@ -5,7 +5,7 @@
             "address": "7601 W Clearwater Ave, Kennewick, WA 99336",
             "phone": "(509) 943-5676",
             "website": "https://www.hapo.org/",
-            "membershipStatus": "Gold",
+            "membershipStatus": "Gold Member",
             "imageLink": "./images/hapo1.png"
         },
         {
@@ -13,7 +13,7 @@
             "address": "888 Swift Blvd, Richland, WA 99352",
             "phone": "(509) 946-4611",
             "website": "https://www.providence.org/locations/kadlec/home",
-            "membershipStatus": "Gold",
+            "membershipStatus": "Gold Member",
             "imageLink": "./images/kadlec.png"
         },
         {
@@ -21,7 +21,7 @@
             "address": "902 Battelle Blvd, Richland, WA 99354",
             "phone": "(509) 375-2121",
             "website": "https://www.pnnl.gov/",
-            "membershipStatus": "Gold",
+            "membershipStatus": "Gold Member",
             "imageLink": "./images/pnnl.png"
         },
         {
@@ -29,7 +29,7 @@
             "address": "51 Gage Blvd, Richland, WA 99352",
             "phone": "(509) 378-3100",
             "website": "https://www.gesa.com/",
-            "membershipStatus": "Gold",
+            "membershipStatus": "Gold Member",
             "imageLink": "./images/gesa.png"
         },
         {
@@ -37,7 +37,7 @@
             "address": "1022 N Columbia Center Blvd, Kennewick, WA 99336",
             "phone": "(509) 942-9590",
             "website": "https://portersrealbbq.com/",
-            "membershipStatus": "Silver",
+            "membershipStatus": "Silver Member",
             "imageLink": "./images/porters.png"
         },
         {
@@ -45,7 +45,7 @@
             "address": "3918 W Clearwater Ave, Kennewick, WA 99336",
             "phone": "(541) 955-4700",
             "website": "https://www.dutchbros.com/",
-            "membershipStatus": "Silver",
+            "membershipStatus": "Silver Member",
             "imageLink": "./images/dutchbros.webp"
         },
         {
@@ -53,7 +53,7 @@
             "address": "16304 N Dallas Rd, Richland, WA 99352",
             "phone": "(509) 628-3880",
             "website": "https://www.gooseridge.com/",
-            "membershipStatus": "Silver",
+            "membershipStatus": "Silver Member",
             "imageLink": "./images/gooseridge1.jpeg"
         },
         {
@@ -61,7 +61,7 @@
             "address": "6311 W Clearwater Ave, Kennewick, WA 99336",
             "phone": "(509) 735-2900",
             "website": "http://golfuniversetc.com/",
-            "membershipStatus": "Bronze",
+            "membershipStatus": "Bronze Member",
             "imageLink": "./images/golfuniverse.png"
         },
         {
@@ -69,7 +69,7 @@
             "address": "1793 W Chinden Blvd, Meridian, ID 83646",
             "phone": "(208) 288-4385",
             "website": "http://www.bruchis.com/",
-            "membershipStatus": "Bronze",
+            "membershipStatus": "Bronze Member",
             "imageLink": "./images/bruchis.png"
         }
     ]

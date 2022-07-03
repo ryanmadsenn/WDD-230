@@ -118,6 +118,7 @@ nav a {
     grid-column: 1/4;
     grid-row: 4/5;
     margin-top: 20px;
+    display: flex;
 }
 
 .divider {
@@ -143,4 +144,9 @@ nav a {
     grid-template-columns: 1fr 1fr;
 }
 
+#contact-main {
+    width: 500px;
 }
+
+}
+
