@@ -1,5 +1,6 @@
 // Add event listeners.
-document.onload = checkWidth(), printJSON(), apiFetch();
+document.onload = checkWidth()
+// , printJSON(), companySpotlights(), addDiscoverEventListeners();
 window.onload = updateLastVisit;
 window.onresize = checkWidth;
 document.getElementById('hamburger').addEventListener('click', dipslayMenu)
@@ -26,6 +27,8 @@ function checkWidth() {
         
         // logo.style.display = "block";
     }
+
+    addDiscoverEventListeners()
 }
 
 function dipslayMenu() {
@@ -104,10 +107,23 @@ function increaseDiscoverBoxBorderRadius(){
 
 
 // Discover box event listeners.
-let discoverImages = document.getElementsByClassName('discover-image')
-for (let i = 0; i < discoverImages.length; i++) {
-    discoverImages[i].addEventListener('mouseenter', decreaseDisoverBoxBorderRadius)
-    discoverImages[i].addEventListener('mouseleave', increaseDiscoverBoxBorderRadius)
+function addDiscoverEventListeners() {
+
+    let discoverImages = document.getElementsByClassName('discover-image')
+
+    if (window.innerWidth > 1000) {
+        for (let i = 0; i < discoverImages.length; i++) {
+            discoverImages[i].addEventListener('mouseenter', decreaseDisoverBoxBorderRadius)
+            discoverImages[i].addEventListener('mouseleave', increaseDiscoverBoxBorderRadius)
+            discoverImages[i].dispatchEvent(new Event ('mouseleave'))
+        } 
+    } else {
+        for (let i = 0; i < discoverImages.length; i++) {
+            discoverImages[i].dispatchEvent(new Event ('mouseenter'))
+            discoverImages[i].removeEventListener('mouseenter', decreaseDisoverBoxBorderRadius)
+            discoverImages[i].removeEventListener('mouseleave', increaseDiscoverBoxBorderRadius)
+        }
+    }
 }
 
 // Insert copyright year into footer and last modified date into footer.
@@ -173,89 +189,3 @@ let dateTimeField = document.getElementById("form-datetime")
 try {
     dateTimeField.value = new Date();
 } catch (error) {}
-
-
-
-async function printJSON() {
-    fetch("./js/data.json")
-        .then(function(response) {
-            return response.json()
-        })
-        .then(function(data) {
-            // console.log(data['businesses'])
-            let businesses = data['businesses']
-
-            businesses.forEach( business => {
-                
-                // Define new html elements
-                let container = document.getElementById('directory')
-                let sect = document.createElement('section')
-                sect.classList.add('business')
-    
-    
-                let businessName = document.createElement('span')
-                businessName.classList.add('business-name')
-                let address = document.createElement('p')
-                let phone = document.createElement('p')
-                let website = document.createElement('a')
-                let membership = document.createElement('p')
-                let image = document.createElement('img')
-    
-                // Assign text content.
-                businessName.textContent = business.name;
-                address.textContent = business.address;
-                phone.textContent = business.phone;
-                website.textContent = "Visit site"
-                website.setAttribute('href', business.website)
-                membership.textContent = business.membershipStatus
-                image.setAttribute('src', business.imageLink)
-    
-                // Append elements.
-                // sect.appendChild(businessName);
-                sect.appendChild(image);
-                sect.appendChild(address);
-                sect.appendChild(phone);
-                sect.appendChild(website);
-                sect.appendChild(membership);
-                
-                try {
-                    container.appendChild(sect)
-                } catch (error) {
-                }
-            });
-        });
-
-        
-    
-}
-
-
-async function apiFetch() {
-
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=Kennewick&appid=f704b08b378b46faee3fbfd691fe3776&units=imperial"
-
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        displayResults(data);
-      } else {
-          throw Error(await response.text());
-      }
-    } catch (error) {
-        console.log(error);
-    }
-  }
-  
-
-function displayResults(data) {
-    const currentTemp = document.querySelector('#current-temp');
-    const weatherIcon = document.querySelector('#weather-icon');
-    const captionDesc = document.querySelector('#conditions-title');
-    const windSpeed = document.querySelector('#mph')
-
-    currentTemp.textContent = data.main.temp.toFixed(0)
-    weatherIcon.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
-    captionDesc.textContent = data.weather[0].description.toUpperCase()
-    windSpeed.textContent = data.wind.speed
-}
