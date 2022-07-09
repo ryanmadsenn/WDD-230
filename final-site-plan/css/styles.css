@@ -1,0 +1,197 @@
+:root {
+    --heading-font: 'Dancing Script', 'Arial';
+    --sub-heading-font: 'Edu SA Beginner', 'Arial';
+    --paragraph-font: 'Quicksand', 'Arial';    
+
+    --color1: #edede9;
+    --color2: #d6ccc2;
+    --color3: #f5ebe0;
+    --color4: #e3d5ca;
+    --color5: #d5bdaf;
+}
+
+/* ---------- General Formatting ---------- */
+
+body {
+    margin: 0 auto;
+    width: 1000px;
+    font-family: var(--paragraph-font);
+}
+
+h1 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    font-family: var(--sub-heading-font);
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+#nav-bar-logo {
+    width: 85px;
+    background-color: var(--color1);
+    border-radius: 50%;
+    margin: 5px;
+}
+
+nav a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    background-color: var(--color1);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+nav a:hover {
+    background-color: var(--color3);
+}
+
+/* ---------- Main ---------- */
+
+main {
+    margin: 20px;
+}
+
+#logo {
+    width: 200px;
+    background-color: var(--color1);
+    border-radius: 50%;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color2);
+    color: black;
+    padding: 25px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+/* ---------- Target Audience Page ---------- */
+
+.target-audience-container {
+    background-color: var(--color1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--color5);
+    margin-bottom: 20px;
+}
+
+.target-audience-container-title {
+    font-family: var(--sub-heading-font);
+    font-size: 25px;
+    background-color: var(--color5);
+    color: black;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding-left: 10px;
+}
+
+.container-element-title {
+    font-family: var(--sub-heading-font);
+    font-size: 20px;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+.container-element {
+    padding-left: 10px;
+    margin: 5px
+}
+
+/* ---------- Color Scheme Page ---------- */
+
+#color-palette {
+    display: flex;
+}
+
+#color-palette p {
+    padding: 10px;
+}
+
+.color1 {
+    background-color: var(--color1);
+}
+
+.color2 {
+    background-color: var(--color2);
+}
+
+.color3 {
+    background-color: var(--color3);
+}
+
+.color4 {
+    background-color: var(--color4);
+}
+
+.color5 {
+    background-color: var(--color5);
+}
+
+/* ---------- Typography Page ---------- */
+
+#typography-heading-font {
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
+
+#typography-sub-heading-font {
+    font-family: var(--sub-heading-font);
+}
+
+/* ---------- Media Queries ---------- */
+@media screen and (max-width: 650px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0;
+        border: none;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    #color-palette {
+        flex-direction: column;
+    }
+
+    #color-palette p {
+        margin: 0;
+    }
+}
+
+/* ---------- Wireframe Page ---------- */
+#wireframe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#wireframe-grid img {
+    width: 90%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 100%;
+    }
+}
