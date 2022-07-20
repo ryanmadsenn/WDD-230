@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the unique services and venues offered by Temple Inn and Suites.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Edu+SA+Beginner&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="js/temple-inn-and-suites.js"></script>
+    <script defer src="js/weather.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div id="weather-alert"></div>
+    <header>
+        <div id="logo-links">
+            <a href="index.html"><img id="nav-bar-logo" src="images/temple-logo.png" alt="Temple Inn and Suites Logo"></a>
+            <a id="hamburger" href="javascript:void(0);" class="icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="links">
+            <a href="index.html">Home</a>
+            <a href="temples.html">Temples</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="services.html">Services</a>
+        </div>
+        <div id="social-icons">
+            <a href="#"><img id="facebook-logo" src="images/facebook-logo-black.png" alt="facebook logo"></a>
+            <a href="#"><img id="instagram-logo" src="images/instagram-logo-black.png" alt="instagram logo"></a>
+        </div>
+    </header>
+    <main id="home-page-main">
+        <section id="hero">
+            <img id="hero-image" src="images/salt_lake_temple.jpeg" alt="brigham-city-temple">
+            <div id="hero-text">
+                <h1 id="hero-title">Temple Inn and Suites</h1>
+                <p id="hero-quote">"Who shall ascend into the hill of the Lord? or who shall stand in his holy place? 
+                    He that hath clean hands, and a pure heart; who hath not lifted up his soul unto vanity, 
+                    nor sworn deceitfully. He shall receive the blessing from the Lord, and righteousness from 
+                    the God of his salvation."<br><br>- Psalm 24:3-5<br></p>
+                <a id="reservation-button" href="reservation.html">Make a reservation</a>
+            </div>
+        </section>
+        <section id="reviews">
+            <h2 id="reviews-title">Reviews</h2>
+            <div id="reviews-container">
+                <div class="review">
+                    <p class="reviewer">Kymberleigh White</p>
+                    <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>The rooms were clean, service was fantastic, and the breakfast was to die for. 
+                        It was a wonderful weekend for my daughter's wedding.</p>
+                </div>
+                <div class="review">
+                    <p class="reviewer">Yesenia Veracruz</p>
+                    <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>We traveled from Mexico to serve as missionaries in the temple. Temple Inn and Suites
+                        has great accomodations for temple missionaries and we thoroughly enjoyed our stay.
+                    </p>
+                </div>
+                <div class="review">
+                    <p class="reviewer">Jeffrey Holland</p>
+                    <p class="stars">⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>Pat and I love staying at Temple Inn and Suites when visiting temples. We love the gospel
+                        focus that really sets the tone for our trip and prepares us to have an uplifting experience
+                        in the temple.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="temple-spotlight">
+            <div id="temple-info-container">
+                <h2 id="temple-spotlight-title">Temple Spotlight</h2>
+                <p id="temple-title">St. George Utah Temple</p>
+                <p id="temple-description">Dedicated in 1877, the St. George Temple was the first temple to be 
+                    completed in Utah and is the oldest operating temple in the Church of Jesus Christ of 
+                    Latter-day Saints. An interesting fact about the St. George Temple is that a cannon used by 
+                    Napoleon in his siege on Moscow aided in creating the gravel for the foundation this temple stands
+                    on.
+                </p>
+            </div>
+            <img id="temple-spotlight-image" src="images/st_george_temple_lds.jpeg" alt="St. George Utah Temple">
+        </section>
+        <section id="weather-section">
+            <h2 id="weather-section-title">Weather</h2>
+            <div id="weather-day-container"> 
+                <div class="weather-day">
+                    <p class="weather-day-title">Today</p>
+                    <img class="weather-day-icon" id="weather-icon" src="#" alt="Weather Icon">
+                    <p class="weather-day-temp" id="current-temp"></p>
+                    <p class="weather-day-hilo" id="hilo"></p>
+                    <p class="weather-day-conditions" id="current-conditions"></p>
+                    <p class="weather-day-humidity" id="current-humidity"></p>
+                </div>
+                <div class="weather-day">
+                    <p class="weather-day-title">Tomorrow</p>
+                    <img class="weather-day-icon" src="#" alt="Weather Icon">
+                    <p class="weather-day-temp"></p>
+                    <p class="weather-day-hilo" id="hilo"></p>
+                    <p class="weather-day-conditions"></p>
+                    <p class="weather-day-humidity"></p>
+                </div>
+                <div class="weather-day">
+                    <p class="weather-day-title">Today</p>
+                    <img class="weather-day-icon" src="#" alt="Weather Icon">
+                    <p class="weather-day-temp"></p>
+                    <p class="weather-day-hilo" id="hilo"></p>
+                    <p class="weather-day-conditions"></p>
+                    <p class="weather-day-humidity"></p>
+                </div>
+                <div class="weather-day">
+                    <p class="weather-day-title">Today</p>
+                    <img class="weather-day-icon" src="#" alt="Weather Icon">
+                    <p class="weather-day-temp"></p>
+                    <p class="weather-day-hilo" id="hilo"></p>
+                    <p class="weather-day-conditions"></p>
+                    <p class="weather-day-humidity"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Temple Inn and Suites</p>
+        <p>Ryan Madsen | WDD 230</p>
+        <p>4800 Montgomery Ln #300, Bethesda, MD 20814</p>
+        <a href="https://goo.gl/maps/endDBYvDtVWWTqGN6">Directions</a>
+        <a href="contact-us.html">Contact Us</a>
+        <p id="last-updated"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+    "temples": [
+        {
+            "image":"./images/temples/columbia_river_washington_temple.jpeg",
+            "name": "Columbia River Washington Temple",
+            "address":"969 Gage Blvd, Richland, WA 99352",
+            "phone":"509-628-0990",
+            "services":["No clothing rental available","No cafeteria available","No patron housing available","Distribution center nearby"],
+            "closures":["Saturday, 1 October 2022", "Wednesday, 23 November 2022 - Thursday, 24 November 2022", "Saturday, 24 December 2022", 
+                        "Saturday, 31 December 2022", "Monday, 13 March 2023 - Monday, 27 March 2023", "Saturday, 1 April 2023",
+                        "Tuesday, 4 July 2023", "Saturday, 30 September 2023", "Wednesday, 22 November 2023 - Thursday, 23 November 2023"]
+        },
+        {
+            "image":"./images/temples/rexburg_temple.jpeg",
+            "name": "Rexburg Idaho Temple",
+            "address":"750 S 2nd E, Rexburg, ID 83440",
+            "phone":"208-656-0880",
+            "services":["Clothing rental available", "No cafeteria available", "No patron housing available", "Distribution center nearby"],
+            "closures":["Saturday, 23 July 2022", "Saturday, 1 October 2022", "Wednesday, 23 November 2022 - Thursday, 24 November 2022",
+                        "Saturday, 24 December 2022", "Saturday, 31 December 2022", "Saturday, 1 April 2023", "Tuesday, 4 July 2023",
+                        "Saturday, 22 July 2023", "Monday, 28 August 2023 - Monday, 11 September 2023", "Saturday, 7 October 2023", 
+                        "Thursday, 23 November 2023 - Friday, 24 November 2023", "Tuesday, 26 December 2023"]
+        },
+        {
+            "image":"./images/temples/gilbert_arizona_temple.jpeg",
+            "name": "Gilbert Arizona Temple",
+            "address":"3301 S Greenfield Rd, Gilbert, AZ 85297",
+            "phone":"208-656-0880",
+            "services":["Clothing rental available", "No cafeteria available", "No patron housing available", "Distribution center nearby"],
+            "closures":["Saturday, 1 October 2022", "Monday, 3 October 2022 - Monday, 17 October 2022", "Wednesday, 23 November 2022 - Thursday, 24 November 2022", 
+                        "Saturday, 24 December 2022", "Saturday, 31 December 2022"]
+        },
+        {
+            "image":"./images/temples/mexico_city_temple_lds.jpeg",
+            "name": "Mexico City Mexico Temple",
+            "address":"Avenida 510 #90 Col. San Juan de Aragon 07950 México, Distrito Federal, Mexico",
+            "phone":"55-5003-3700",
+            "services":["Clothing rental available", "No cafeteria available", "Patron housing available", "Distribution center nearby"],
+            "closures":["Saturday, 1 October 2022", "Saturday, 24 December 2022 - Sunday, 25 December 2022", "Saturday, 31 December 2022", 
+                        "Sunday, 1 January 2023", "Monday, 9 January 2023 - Monday, 23 January 2023", "Saturday, 1 April 2023",
+                        "Monday, 26 June 2023 - Monday, 10 July 2023", "Saturday, 7 October 2023 - Sunday, 8 October 2023", 
+                        "Sunday, 24 December 2023 - Monday, 25 December 2023", "Sunday, 31 December 2023"]
+        }
+    ]
+}

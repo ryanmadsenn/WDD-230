@@ -1,0 +1,86 @@
+@media screen and (max-width: 1250px) {
+    #hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #hero-title {
+        font-size: 37.5px;
+    }
+
+    #hero-quote {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    #reservation-button {
+        font-size: 20px;
+        padding: 7.5px;
+        margin: 10px;
+    }
+
+    .review {
+        padding: 10px;
+    }
+
+    #temple-description {
+        width: 100%;
+    }
+
+    #temple-info-container {
+        padding: 15px;
+    }
+
+    #hero-image {
+        grid-column: 1/2;
+    }
+
+}
+
+
+@media screen and (max-width: 1070px) {
+    #temple-spotlight {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    #hero-title {
+        font-size: 30px;
+    }
+
+    #hero-quote {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    #reservation-button {
+        font-size: 20px;
+        padding: 7.5px;
+        margin: 10px;
+    }
+
+    #services-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (max-width: 980px) {
+    #hero {
+        grid-template-columns: 1fr;
+    }
+
+    #temple-spotlight {
+        grid-template-columns: 1fr
+    }
+
+    #reception-main {
+        grid-template-columns: 1fr;
+    }
+
+    #missionary-main {
+        grid-template-columns: 1fr;
+    }
+}
+
