@@ -49,6 +49,7 @@ function displayWeather(data) {
   }
 
   try {
+    alert.style.display ="flex";
     alert.innerHTML = `<p>${data.alerts[0].event}: ${data.alerts[0].description}</p><a href="#" id="close-alert">❌</a>`
 
     if (window.innerWidth < 650) {

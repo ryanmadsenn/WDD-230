@@ -35,7 +35,7 @@ p, a, li, label, div {
 /* ---------- Header ---------- */
 
 #weather-alert {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color3);
