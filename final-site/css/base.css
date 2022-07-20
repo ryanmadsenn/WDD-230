@@ -394,9 +394,13 @@ textarea {
 }
 
 .submitBtn {
+    width: 150px;
     font-family: var(--paragraph-font);
     margin-top: 10px;
     background-color: var(--color1);
+    border: solid 1px #333;
+    padding: 5px;
+    border-radius: 5px;
     transition: background-color 0.25s;
 }
 
